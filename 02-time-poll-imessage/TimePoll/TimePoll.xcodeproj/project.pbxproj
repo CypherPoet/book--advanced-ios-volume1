@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3D6B4BE242FA09C0074DD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4BD242FA09C0074DD67 /* Assets.xcassets */; };
+		F3D6B4C5242FA09C0074DD67 /* TimePoll MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3D6B4C4242FA09C0074DD67 /* TimePoll MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3D6B4CA242FA09C0074DD67 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6B4C9242FA09C0074DD67 /* Messages.framework */; };
+		F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B4CC242FA09C0074DD67 /* MessagesViewController.swift */; };
+		F3D6B4D0242FA09C0074DD67 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */; };
+		F3D6B4D2242FA09D0074DD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3D6B4C6242FA09C0074DD67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D6B4B4242FA09B0074DD67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D6B4C3242FA09C0074DD67;
+			remoteInfo = "TimePoll MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3D6B4D9242FA09D0074DD67 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F3D6B4C5242FA09C0074DD67 /* TimePoll MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F3D6B4BA242FA09B0074DD67 /* TimePoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D6B4BD242FA09C0074DD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D6B4BF242FA09C0074DD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D6B4C4242FA09C0074DD67 /* TimePoll MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TimePoll MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D6B4C9242FA09C0074DD67 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		F3D6B4CC242FA09C0074DD67 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F3D6B4CF242FA09C0074DD67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D6B4D3242FA09D0074DD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3D6B4C1242FA09C0074DD67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D6B4CA242FA09C0074DD67 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3D6B4B3242FA09B0074DD67 = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4BC242FA09B0074DD67 /* TimePoll */,
+				F3D6B4CB242FA09C0074DD67 /* TimePoll MessagesExtension */,
+				F3D6B4C8242FA09C0074DD67 /* Frameworks */,
+				F3D6B4BB242FA09B0074DD67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3D6B4BB242FA09B0074DD67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4BA242FA09B0074DD67 /* TimePoll.app */,
+				F3D6B4C4242FA09C0074DD67 /* TimePoll MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3D6B4BC242FA09B0074DD67 /* TimePoll */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4BD242FA09C0074DD67 /* Assets.xcassets */,
+				F3D6B4BF242FA09C0074DD67 /* Info.plist */,
+			);
+			path = TimePoll;
+			sourceTree = "<group>";
+		};
+		F3D6B4C8242FA09C0074DD67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4C9242FA09C0074DD67 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3D6B4CB242FA09C0074DD67 /* TimePoll MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4D3242FA09D0074DD67 /* Info.plist */,
+				F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */,
+				F3D6B4DD242FA2D70074DD67 /* Resources */,
+				F3D6B4DE242FA4870074DD67 /* Scenes */,
+			);
+			path = "TimePoll MessagesExtension";
+			sourceTree = "<group>";
+		};
+		F3D6B4DD242FA2D70074DD67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3D6B4DE242FA4870074DD67 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B4CC242FA09C0074DD67 /* MessagesViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3D6B4B9242FA09B0074DD67 /* TimePoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D6B4DA242FA09D0074DD67 /* Build configuration list for PBXNativeTarget "TimePoll" */;
+			buildPhases = (
+				F3D6B4B8242FA09B0074DD67 /* Resources */,
+				F3D6B4D9242FA09D0074DD67 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D6B4C7242FA09C0074DD67 /* PBXTargetDependency */,
+			);
+			name = TimePoll;
+			productName = TimePoll;
+			productReference = F3D6B4BA242FA09B0074DD67 /* TimePoll.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		F3D6B4C3242FA09C0074DD67 /* TimePoll MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D6B4D6242FA09D0074DD67 /* Build configuration list for PBXNativeTarget "TimePoll MessagesExtension" */;
+			buildPhases = (
+				F3D6B4C0242FA09C0074DD67 /* Sources */,
+				F3D6B4C1242FA09C0074DD67 /* Frameworks */,
+				F3D6B4C2242FA09C0074DD67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimePoll MessagesExtension";
+			productName = "TimePoll MessagesExtension";
+			productReference = F3D6B4C4242FA09C0074DD67 /* TimePoll MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3D6B4B4242FA09B0074DD67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = CypherPoet;
+				TargetAttributes = {
+					F3D6B4B9242FA09B0074DD67 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					F3D6B4C3242FA09C0074DD67 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = F3D6B4B7242FA09B0074DD67 /* Build configuration list for PBXProject "TimePoll" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3D6B4B3242FA09B0074DD67;
+			productRefGroup = F3D6B4BB242FA09B0074DD67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3D6B4B9242FA09B0074DD67 /* TimePoll */,
+				F3D6B4C3242FA09C0074DD67 /* TimePoll MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3D6B4B8242FA09B0074DD67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D6B4BE242FA09C0074DD67 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D6B4C2242FA09C0074DD67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D6B4D2242FA09D0074DD67 /* Assets.xcassets in Resources */,
+				F3D6B4D0242FA09C0074DD67 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3D6B4C0242FA09C0074DD67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3D6B4C7242FA09C0074DD67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D6B4C3242FA09C0074DD67 /* TimePoll MessagesExtension */;
+			targetProxy = F3D6B4C6242FA09C0074DD67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3D6B4CF242FA09C0074DD67 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3D6B4D4242FA09D0074DD67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3D6B4D5242FA09D0074DD67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3D6B4D7242FA09D0074DD67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QRXXH2RKAG;
+				INFOPLIST_FILE = "TimePoll MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.cypherpoet.TimePoll.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3D6B4D8242FA09D0074DD67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QRXXH2RKAG;
+				INFOPLIST_FILE = "TimePoll MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.cypherpoet.TimePoll.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3D6B4DB242FA09D0074DD67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QRXXH2RKAG;
+				INFOPLIST_FILE = TimePoll/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.cypherpoet.TimePoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3D6B4DC242FA09D0074DD67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QRXXH2RKAG;
+				INFOPLIST_FILE = TimePoll/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.cypherpoet.TimePoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3D6B4B7242FA09B0074DD67 /* Build configuration list for PBXProject "TimePoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D6B4D4242FA09D0074DD67 /* Debug */,
+				F3D6B4D5242FA09D0074DD67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D6B4D6242FA09D0074DD67 /* Build configuration list for PBXNativeTarget "TimePoll MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D6B4D7242FA09D0074DD67 /* Debug */,
+				F3D6B4D8242FA09D0074DD67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D6B4DA242FA09D0074DD67 /* Build configuration list for PBXNativeTarget "TimePoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D6B4DB242FA09D0074DD67 /* Debug */,
+				F3D6B4DC242FA09D0074DD67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3D6B4B4242FA09B0074DD67 /* Project object */;
+}

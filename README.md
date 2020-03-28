@@ -9,4 +9,4 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 ## [Chapter 1: Vocal Images](./01-vocal-images)
 
-## [Chapter 2: Tme](./02-)
+## [Chapter 2: Time Share](./02-)
