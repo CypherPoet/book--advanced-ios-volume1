@@ -13,6 +13,7 @@
 		F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B4CC242FA09C0074DD67 /* MessagesViewController.swift */; };
 		F3D6B4D0242FA09C0074DD67 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */; };
 		F3D6B4D2242FA09D0074DD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */; };
+		F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F3D6B4CF242FA09C0074DD67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3D6B4D3242FA09D0074DD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +123,18 @@
 		F3D6B4DE242FA4870074DD67 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6B50F242FE1480074DD67 /* Create Event */,
 				F3D6B4CC242FA09C0074DD67 /* MessagesViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F3D6B50F242FE1480074DD67 /* Create Event */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */,
+			);
+			path = "Create Event";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */,
+				F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
