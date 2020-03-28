@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CreateEventViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var datePicker: UIDatePicker!
@@ -120,17 +121,16 @@ private extension CreateEventViewController {
     }
 
     
-//    func updateSnapshot(withNew trips: [Trip], animate: Bool = true) {
-//        guard let dataSource = dataSource else { return }
-//
-//        currentDataSnapshot = DataSourceSnapshot()
-//
-//        currentDataSnapshot.appendSections([.all])
-//        currentDataSnapshot.appendItems(trips)
-//
-//        dataSource.apply(currentDataSnapshot, animatingDifferences: animate)
-//    }
-//
+    func updateSnapshot(withNew data: [Date], animate: Bool = true) {
+        guard let dataSource = dataSource else { return }
+
+        currentDataSnapshot = DataSourceSnapshot()
+
+        currentDataSnapshot.appendSections([.all])
+        currentDataSnapshot.appendItems(data)
+
+        dataSource.apply(currentDataSnapshot, animatingDifferences: animate)
+    }
 }
 
 
@@ -139,3 +139,5 @@ extension CreateEventViewController: UITableViewDelegate {
     
     
 }
+
+extension CreateEventViewController: Storyboarded {}

@@ -21,6 +21,9 @@
                                     <constraint firstAttribute="height" constant="44" id="TdX-13-zCs"/>
                                 </constraints>
                                 <state key="normal" title="Create a New Event"/>
+                                <connections>
+                                    <action selector="createNewEventTapped" destination="ObA-dk-sSI" eventType="touchUpInside" id="p9U-zD-dHN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -119,6 +122,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sv5-dR-yrp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b20-48-dRV"/>
                     <connections>
                         <outlet property="datePicker" destination="PPD-Z8-Zfd" id="kda-EM-FW5"/>
                         <outlet property="tableView" destination="P6e-nM-1kt" id="H2B-OL-WLY"/>

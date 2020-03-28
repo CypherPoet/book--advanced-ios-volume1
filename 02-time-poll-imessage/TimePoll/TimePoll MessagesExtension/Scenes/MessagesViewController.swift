@@ -12,13 +12,30 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
+}
+
+
+// MARK: - Lifecycle
+extension MessagesViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+}
+    
+
+// MARK: - Event Handling
+extension MessagesViewController {
+    
+    @IBAction func createNewEventTapped() {
+        requestPresentationStyle(.expanded)
     }
     
-    
-    // MARK: - Conversation Handling
+}
+
+
+// MARK: - Conversation Handling
+extension MessagesViewController {
     
     override func willBecomeActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the inactive to active state.
@@ -54,11 +71,22 @@ class MessagesViewController: MSMessagesAppViewController {
         // Use this to clean up state related to the deleted message.
     }
     
+    
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called before the extension transitions to a new presentation style.
-    
         // Use this method to prepare for the change in presentation style.
+        
+        // Before creating any child view controllers, we need to clear out any
+        // that already exist, effectively resetting our main controller before we perform any new operations.
+        children.forEach { $0.performRemoval() }
+        
+        guard let activeConversation = activeConversation else { return }
+        
+        if presentationStyle == .expanded {
+            displayCreateEventViewController(during: activeConversation)
+        }
     }
+    
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
@@ -67,3 +95,26 @@ class MessagesViewController: MSMessagesAppViewController {
     }
 
 }
+
+
+// MARK: - Navigation
+extension MessagesViewController {
+    
+    func displayCreateEventViewController(
+        during conversation: MSConversation
+    ) {
+        let createEventVC = CreateEventViewController.instantiateFromStoryboard(named: "MainInterface")
+        
+//        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        add(child: createEventVC)
+        
+        // Add Auto Layout constraints so the child view continues to fill the full view.
+        createEventVC.view.layout(using: [
+            createEventVC.view.topAnchor.constraint(equalTo: view.topAnchor),
+            createEventVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            createEventVC.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            createEventVC.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
+    }
+}
+

@@ -14,6 +14,9 @@
 		F3D6B4D0242FA09C0074DD67 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */; };
 		F3D6B4D2242FA09D0074DD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */; };
 		F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */; };
+		F3D6B516242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B515242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift */; };
+		F3D6B51A243003B50074DD67 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B519243003B50074DD67 /* Storyboarded.swift */; };
+		F3D6B51D243005370074DD67 /* UIView+layoutUsingConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		F3D6B4D1242FA09D0074DD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3D6B4D3242FA09D0074DD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		F3D6B515242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddAndRemoveChild.swift"; sourceTree = "<group>"; };
+		F3D6B519243003B50074DD67 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layoutUsingConstraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		F3D6B4CB242FA09C0074DD67 /* TimePoll MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6B512242FF6260074DD67 /* Reusables */,
 				F3D6B4D3242FA09D0074DD67 /* Info.plist */,
 				F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */,
 				F3D6B4DD242FA2D70074DD67 /* Resources */,
@@ -135,6 +142,48 @@
 				F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */,
 			);
 			path = "Create Event";
+			sourceTree = "<group>";
+		};
+		F3D6B512242FF6260074DD67 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B518243003A00074DD67 /* Protocols */,
+				F3D6B513242FF62B0074DD67 /* Extensions */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		F3D6B513242FF62B0074DD67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B51B243005230074DD67 /* UIView */,
+				F3D6B514242FF62E0074DD67 /* UIViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3D6B514242FF62E0074DD67 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B515242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		F3D6B518243003A00074DD67 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B519243003B50074DD67 /* Storyboarded.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3D6B51B243005230074DD67 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */,
+				F3D6B516242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift in Sources */,
+				F3D6B51D243005370074DD67 /* UIView+layoutUsingConstraints.swift in Sources */,
 				F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */,
+				F3D6B51A243003B50074DD67 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
