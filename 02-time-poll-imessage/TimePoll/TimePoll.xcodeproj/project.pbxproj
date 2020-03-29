@@ -17,6 +17,10 @@
 		F3D6B516242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B515242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift */; };
 		F3D6B51A243003B50074DD67 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B519243003B50074DD67 /* Storyboarded.swift */; };
 		F3D6B51D243005370074DD67 /* UIView+layoutUsingConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */; };
+		F3D6B521243016040074DD67 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B520243016040074DD67 /* EventDate.swift */; };
+		F3D6B524243021620074DD67 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B523243021620074DD67 /* Formatters.swift */; };
+		F3D6B528243021FC0074DD67 /* EventDateChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B526243021FC0074DD67 /* EventDateChoiceTableViewCell.swift */; };
+		F3D6B529243021FC0074DD67 /* EventDateChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B527243021FC0074DD67 /* EventDateChoiceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		F3D6B515242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddAndRemoveChild.swift"; sourceTree = "<group>"; };
 		F3D6B519243003B50074DD67 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layoutUsingConstraints.swift"; sourceTree = "<group>"; };
+		F3D6B520243016040074DD67 /* EventDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDate.swift; sourceTree = "<group>"; };
+		F3D6B523243021620074DD67 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		F3D6B526243021FC0074DD67 /* EventDateChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		F3D6B527243021FC0074DD67 /* EventDateChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDateChoiceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 		F3D6B4CB242FA09C0074DD67 /* TimePoll MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6B51E243015F60074DD67 /* Data */,
 				F3D6B512242FF6260074DD67 /* Reusables */,
 				F3D6B4D3242FA09D0074DD67 /* Info.plist */,
 				F3D6B4CE242FA09C0074DD67 /* MainInterface.storyboard */,
@@ -139,6 +148,7 @@
 		F3D6B50F242FE1480074DD67 /* Create Event */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6B525243021B30074DD67 /* Cells */,
 				F3D6B510242FE1F20074DD67 /* CreateEventViewController.swift */,
 			);
 			path = "Create Event";
@@ -147,6 +157,7 @@
 		F3D6B512242FF6260074DD67 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6B5222430215A0074DD67 /* Formatters */,
 				F3D6B518243003A00074DD67 /* Protocols */,
 				F3D6B513242FF62B0074DD67 /* Extensions */,
 			);
@@ -184,6 +195,39 @@
 				F3D6B51C243005360074DD67 /* UIView+layoutUsingConstraints.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		F3D6B51E243015F60074DD67 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B51F243015F90074DD67 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3D6B51F243015F90074DD67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B520243016040074DD67 /* EventDate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3D6B5222430215A0074DD67 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B523243021620074DD67 /* Formatters.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		F3D6B525243021B30074DD67 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6B526243021FC0074DD67 /* EventDateChoiceTableViewCell.swift */,
+				F3D6B527243021FC0074DD67 /* EventDateChoiceTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +319,7 @@
 			files = (
 				F3D6B4D2242FA09D0074DD67 /* Assets.xcassets in Resources */,
 				F3D6B4D0242FA09C0074DD67 /* MainInterface.storyboard in Resources */,
+				F3D6B529243021FC0074DD67 /* EventDateChoiceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D6B521243016040074DD67 /* EventDate.swift in Sources */,
 				F3D6B4CD242FA09C0074DD67 /* MessagesViewController.swift in Sources */,
 				F3D6B516242FF6740074DD67 /* UIViewController+AddAndRemoveChild.swift in Sources */,
 				F3D6B51D243005370074DD67 /* UIView+layoutUsingConstraints.swift in Sources */,
 				F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */,
 				F3D6B51A243003B50074DD67 /* Storyboarded.swift in Sources */,
+				F3D6B524243021620074DD67 /* Formatters.swift in Sources */,
+				F3D6B528243021FC0074DD67 /* EventDateChoiceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

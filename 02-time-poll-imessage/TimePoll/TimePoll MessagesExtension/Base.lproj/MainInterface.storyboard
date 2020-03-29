@@ -90,6 +90,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etN-Wf-DnD">
                                         <rect key="frame" x="0.0" y="7" width="64" height="30"/>
                                         <state key="normal" title="Add Date"/>
+                                        <connections>
+                                            <action selector="addDateChoice:" destination="hJg-Dv-DFt" eventType="touchUpInside" id="NST-e5-kCH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiA-lm-c6G">
                                         <rect key="frame" x="104" y="7" width="64" height="30"/>

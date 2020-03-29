@@ -103,7 +103,7 @@ extension MessagesViewController {
     func displayCreateEventViewController(
         during conversation: MSConversation
     ) {
-        let createEventVC = CreateEventViewController.instantiateFromStoryboard(named: "MainInterface")
+        let createEventVC = CreateEventViewController.instantiate(dateChoices: [])
         
 //        viewController.view.translatesAutoresizingMaskIntoConstraints = false
         add(child: createEventVC)
