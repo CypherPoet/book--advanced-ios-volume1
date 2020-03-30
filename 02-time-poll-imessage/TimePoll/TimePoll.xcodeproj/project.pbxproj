@@ -10,6 +10,7 @@
 		F373CCDA243126FD00479CAC /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373CCD9243126FD00479CAC /* DateSelectionViewController.swift */; };
 		F373CCDF24324F1B00479CAC /* Burritos in Frameworks */ = {isa = PBXBuildFile; productRef = F373CCDE24324F1B00479CAC /* Burritos */; };
 		F373CCE12432506C00479CAC /* EventDate+DecodingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373CCE02432506C00479CAC /* EventDate+DecodingUtils.swift */; };
+		F373CCE424326F9800479CAC /* Collection+EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373CCE324326F9800479CAC /* Collection+EventDate.swift */; };
 		F3D6B4BE242FA09C0074DD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D6B4BD242FA09C0074DD67 /* Assets.xcassets */; };
 		F3D6B4C5242FA09C0074DD67 /* TimePoll MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3D6B4C4242FA09C0074DD67 /* TimePoll MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3D6B4CA242FA09C0074DD67 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6B4C9242FA09C0074DD67 /* Messages.framework */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		F373CCD9243126FD00479CAC /* DateSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionViewController.swift; sourceTree = "<group>"; };
 		F373CCE02432506C00479CAC /* EventDate+DecodingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventDate+DecodingUtils.swift"; sourceTree = "<group>"; };
+		F373CCE324326F9800479CAC /* Collection+EventDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+EventDate.swift"; sourceTree = "<group>"; };
 		F3D6B4BA242FA09B0074DD67 /* TimePoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D6B4BD242FA09C0074DD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3D6B4BF242FA09C0074DD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F373CCE224326F6E00479CAC /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F373CCE324326F9800479CAC /* Collection+EventDate.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		F3D6B4B3242FA09B0074DD67 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		F3D6B513242FF62B0074DD67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F373CCE224326F6E00479CAC /* Collection */,
 				F3D6B52A243103C20074DD67 /* URLQueryItem */,
 				F3D6B51B243005230074DD67 /* UIView */,
 				F3D6B514242FF62E0074DD67 /* UIViewController */,
@@ -366,6 +377,7 @@
 				F373CCDA243126FD00479CAC /* DateSelectionViewController.swift in Sources */,
 				F3D6B51D243005370074DD67 /* UIView+layoutUsingConstraints.swift in Sources */,
 				F373CCE12432506C00479CAC /* EventDate+DecodingUtils.swift in Sources */,
+				F373CCE424326F9800479CAC /* Collection+EventDate.swift in Sources */,
 				F3D6B511242FE1F20074DD67 /* CreateEventViewController.swift in Sources */,
 				F3D6B51A243003B50074DD67 /* Storyboarded.swift in Sources */,
 				F3D6B524243021620074DD67 /* Formatters.swift in Sources */,

@@ -76,6 +76,15 @@ extension EventDate: Hashable {
 }
 
 
+// MARK: - Computeds
+extension EventDate {
+    
+    var tableCellDateString: String {
+        Self.tableCellDateFormatter.string(from: date)
+    }
+}
+
+
 // MARK: - Formatting
 extension EventDate {
     
@@ -85,6 +94,16 @@ extension EventDate {
         formatter.dateStyle = .long
         formatter.timeStyle = .short
         formatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        return formatter
+    }()
+    
+    
+    static let tableCellDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        
+        formatter.dateStyle = .long
+        formatter.timeStyle = .short
         
         return formatter
     }()

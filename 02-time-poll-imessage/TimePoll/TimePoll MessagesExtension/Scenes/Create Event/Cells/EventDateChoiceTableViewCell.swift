@@ -44,7 +44,7 @@ extension EventDateChoiceTableViewCell {
 private extension EventDateChoiceTableViewCell {
     
     func render(with eventDate: EventDate) {
-        titleLabel.text = Self.dateFormatter.string(from: eventDate.date)
+        titleLabel.text = eventDate.tableCellDateString
         
         if showsTotalVoteCount {
             subtitleLabel.text = "Total Votes: \(eventDate.totalVoteCount)"
@@ -56,16 +56,3 @@ private extension EventDateChoiceTableViewCell {
     }
 }
 
-
-
-extension EventDateChoiceTableViewCell {
-    
-    static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        
-        formatter.dateStyle = .long
-        formatter.timeStyle = .short
-        
-        return formatter
-    }()
-}

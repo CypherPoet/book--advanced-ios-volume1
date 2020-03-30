@@ -153,33 +153,44 @@ extension MessagesViewController {
 }
 
 
+// MARK: - Private Helpers
+private extension MessagesViewController {
+    
+    func composeMessage(
+        with eventDates: [EventDate],
+        during conversation: MSConversation,
+        in messageSession: MSSession
+    ) {
+        guard let messageURL = EventDate.messagesURL(from: eventDates) else { return }
+        
+        let messageLayout = MSMessageTemplateLayout()
+        messageLayout.caption = "I voted."
+        messageLayout.image = eventDates.messagePreviewImage()
+
+        let message = MSMessage(session: messageSession)
+        message.url = messageURL
+        message.layout = messageLayout
+        
+        conversation.insert(message) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
+
+
 // MARK: - CreateEventViewControllerDelegate
 extension MessagesViewController: CreateEventViewControllerDelegate {
 
     func viewController(_ controller: UIViewController, didCreateMessageWith eventDates: [EventDate]) {
         requestPresentationStyle(.compact)
         
-        guard
-            let activeConversation = activeConversation,
-            let messageURL = EventDate.messagesURL(from: eventDates)
-        else { return }
+        guard let activeConversation = activeConversation else { return }
         
         let messageSession = activeConversation.selectedMessage?.session ?? MSSession()
-        let message = MSMessage(session: messageSession)
-        
-        let messageLayout = MSMessageTemplateLayout()
-        messageLayout.caption = "I voted."
-        
-        
-        message.url = messageURL
-        message.layout = messageLayout
-        
-        
-        activeConversation.insert(message) { error in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+
+        composeMessage(with: eventDates, during: activeConversation, in: messageSession)
     }
 }
 
