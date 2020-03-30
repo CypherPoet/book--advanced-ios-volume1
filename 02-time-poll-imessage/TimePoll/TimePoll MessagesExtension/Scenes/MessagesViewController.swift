@@ -11,7 +11,6 @@ import Messages
 
 
 class MessagesViewController: MSMessagesAppViewController {
-    
 }
 
 
@@ -42,11 +41,23 @@ extension MessagesViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
+        
+        print("willBecomeActive")
+        // 🔑 If we're becoming active in the expanded state, we'll assume that this is because
+        // a user has selected a poll that was sent to them
+        guard
+            presentationStyle == .expanded,
+            let selectedMessage = conversation.selectedMessage
+        else { return }
+
+        print("willBecomeActive -- expanded state")
+
+        displayDateSelectionViewController(for: selectedMessage)
     }
     
     override func didResignActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the active to inactive state.
-        // This will happen when the user dissmises the extension, changes to a different
+        // This will happen when the user dismisses the extension, changes to a different
         // conversation or quits Messages.
         
         // Use this method to release shared resources, save user data, invalidate timers,
@@ -73,6 +84,8 @@ extension MessagesViewController {
     
     
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        print("willTransition")
+
         // Called before the extension transitions to a new presentation style.
         // Use this method to prepare for the change in presentation style.
         
@@ -99,22 +112,83 @@ extension MessagesViewController {
 
 // MARK: - Navigation
 extension MessagesViewController {
-    
-    func displayCreateEventViewController(
-        during conversation: MSConversation
-    ) {
-        let createEventVC = CreateEventViewController.instantiate(dateChoices: [])
-        
-//        viewController.view.translatesAutoresizingMaskIntoConstraints = false
-        add(child: createEventVC)
+
+    private func presentViewController(_ viewController: UIViewController) {
+        add(child: viewController)
         
         // Add Auto Layout constraints so the child view continues to fill the full view.
-        createEventVC.view.layout(using: [
-            createEventVC.view.topAnchor.constraint(equalTo: view.topAnchor),
-            createEventVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            createEventVC.view.leftAnchor.constraint(equalTo: view.leftAnchor),
-            createEventVC.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+        viewController.view.layout(using: [
+            viewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            viewController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            viewController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
         ])
+    }
+    
+    
+    func displayCreateEventViewController(during conversation: MSConversation) {
+        let createEventVC = CreateEventViewController.instantiate(
+            dateChoices: [],
+            delegate: self
+        )
+        
+        presentViewController(createEventVC)
+    }
+    
+    
+    func displayDateSelectionViewController(for selectedMessage: MSMessage) {
+        guard
+            let messageURL = selectedMessage.url,
+            let dateChoices = EventDate.datesFromMessageURL(messageURL)
+        else { return }
+        
+        
+        let viewController = DateSelectionViewController.instantiate(
+            dateChoices: dateChoices,
+            delegate: self
+        )
+
+        presentViewController(viewController)
     }
 }
 
+
+// MARK: - CreateEventViewControllerDelegate
+extension MessagesViewController: CreateEventViewControllerDelegate {
+
+    func viewController(_ controller: UIViewController, didCreateMessageWith eventDates: [EventDate]) {
+        requestPresentationStyle(.compact)
+        
+        guard
+            let activeConversation = activeConversation,
+            let messageURL = EventDate.messagesURL(from: eventDates)
+        else { return }
+        
+        let messageSession = activeConversation.selectedMessage?.session ?? MSSession()
+        let message = MSMessage(session: messageSession)
+        
+        let messageLayout = MSMessageTemplateLayout()
+        messageLayout.caption = "I voted."
+        
+        
+        message.url = messageURL
+        message.layout = messageLayout
+        
+        
+        activeConversation.insert(message) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
+
+
+// MARK: - DateSelectionViewControllerDelegate
+//extension MessagesViewController: DateSelectionViewControllerDelegate {
+//
+//    func viewController(_ controller: DateSelectionViewController, didSelect eventDate: EventDate) {
+//
+//    }
+//}
+//

@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="106.47321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Selection View Controller-->
         <scene sceneID="k3w-9l-Kfp">
             <objects>
-                <viewController storyboardIdentifier="DateSelectionViewController" id="5cc-kZ-vTK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DateSelectionViewController" id="5cc-kZ-vTK" customClass="DateSelectionViewController" customModule="TimePoll_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3S-1c-NzI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5JQ-bv-aca"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveSelectedDates" destination="5cc-kZ-vTK" eventType="touchUpInside" id="g4x-Cq-3oY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -193,6 +196,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kam-ze-IY3"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="oyH-qM-fKG" id="K4S-cJ-n02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-bQ-BqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

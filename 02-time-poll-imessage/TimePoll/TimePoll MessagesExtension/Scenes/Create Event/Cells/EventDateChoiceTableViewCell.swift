@@ -9,32 +9,53 @@
 import UIKit
 
 class EventDateChoiceTableViewCell: UITableViewCell {
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var subtitleLabel: UILabel!
     
-    var eventDate: EventDate!
     
+    var eventDate: EventDate? {
+        didSet {
+            guard let eventDate = eventDate else { return }
+            DispatchQueue.main.async { self.render(with: eventDate) }
+        }
+    }
     
+    var showsTotalVoteCount: Bool = false
+}
+
+
+// MARK: - Computeds
+extension EventDateChoiceTableViewCell {
+    static var nib: UINib {
+        UINib(nibName: "EventDateChoiceTableViewCell", bundle: nil)
+    }
+}
+
+
+// MARK: - Lifecycle
+extension EventDateChoiceTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        setupView()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
 
 
+// MARK: - Private Helpers
 private extension EventDateChoiceTableViewCell {
     
-    func setupView() {
+    func render(with eventDate: EventDate) {
+        titleLabel.text = Self.dateFormatter.string(from: eventDate.date)
         
+        if showsTotalVoteCount {
+            subtitleLabel.text = "Total Votes: \(eventDate.totalVoteCount)"
+        } else {
+            subtitleLabel.text = ""
+        }
+        
+        accessoryType = (eventDate.hasBeenVotedForByUser || eventDate.hasBeenVotedForByRecipient) ? .checkmark : .none
     }
 }
+
 
 
 extension EventDateChoiceTableViewCell {
